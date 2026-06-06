@@ -5,7 +5,7 @@
 ## 下载
 
 最新版本可直接下载使用（无需安装 Python）：  
-👉 [v3.5 可执行文件](https://github.com/waystac/pv-reconciliation-tool/releases/tag/v3.5)（点击页面中的 `光伏结算对账核销工具.exe` 即可下载）
+👉 [v3.5 可执行文件](https://github.com/waystac/pv-reconciliation-tool/releases/tag/v3.5)（点击页面中的 ` pv-reconciliation-tool_v3.5.exe ` 即可下载）
 
 ## 功能特点
 
