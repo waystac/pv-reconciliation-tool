@@ -35,15 +35,16 @@
 1. 下载本项目代码到本地。
 2. 在命令行中运行：
    ```bash
-   python 光伏结算对账核销工具.py
+   python main.py
    ```
+   （请将 `main.py` 替换为实际的脚本文件名）
 3. 或使用 Thonny 等 Python IDE 打开并运行。
 
 ### 打包为 exe（可选）
 
 ```bash
 pip install pyinstaller
-pyinstaller --onefile --noconsole --name "光伏结算对账核销工具" 光伏结算对账核销工具.py
+pyinstaller --onefile --noconsole --name "光伏结算对账核销工具" main.py
 ```
 
 生成的 exe 文件位于 `dist` 目录下，可直接在未安装 Python 的电脑上运行。
@@ -115,6 +116,10 @@ pyinstaller --onefile --noconsole --name "光伏结算对账核销工具" 光伏
 - openpyxl
 - tkinter（Python 内置）
 
+## 作者
+
+waystac
+
 ## 许可证
 
 MIT License
@@ -122,4 +127,3 @@ MIT License
 ## 贡献
 
 欢迎提交 Issue 或 Pull Request 来改进这个工具。
-```
