@@ -1,3 +1,31 @@
+"""
+光伏结算对账核销工具 v3.5
+
+作者: waystac
+许可证: MIT License
+仓库: https://github.com/waystac/pv-reconciliation-tool
+
+Copyright (c) 2026 waystac
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import pandas as pd
@@ -40,7 +68,7 @@ class CheckApp:
     def create_widgets(self):
         title = tk.Label(self.root, text="光伏结算对账核销工具 v3.5", font=("微软雅黑", 16, "bold"))
         title.pack(pady=(10, 0))
-        copyright_label = tk.Label(self.root, text="Copyright (C) 2026", font=("微软雅黑", 9), fg="gray")
+        copyright_label = tk.Label(self.root, text="Copyright (C) 2026 waystac", font=("微软雅黑", 9), fg="gray")
         copyright_label.pack()
         desc_label = tk.Label(self.root,
                               text="功能：将汇总表中的每笔总数，与明细表中同一用户的多条明细自动配对勾销。",
@@ -227,7 +255,7 @@ class CheckApp:
                 h_user = self._normalize_name(hrow[name])
                 h_total = round(float(hrow[total]), 2)
                 h_date = pd.to_datetime(hrow[date1])
-                # 筛选出所有符合条件的行，然后取第一条“未匹配”的
+                # 筛选出所有符合条件的行，然后取第一条"未匹配"的
                 mask = (
                     (df1_name_norm == h_user) &
                     (df1[total].round(2) == h_total) &
